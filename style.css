@@ -53,12 +53,13 @@
 
 .lowerItemsDiv{
     display: flex;
+    padding-top: 100px;
 }
 
 .lowerBootsPicDiv{
     display: flex;
     flex-direction: column;
-    padding-left: 10%;
+    padding-left: 250px;
 }
 }
 
@@ -70,8 +71,7 @@
 .lowerTextDiv{
     display: flex;
     flex-direction: column;
-    padding-left: 5%;
-    justify-content: space-around;
+    padding-left: 150px;
 }
 
 .lowerProzenteDiv{
@@ -82,6 +82,9 @@
 
 .lowerAddToCartButtonDiv{
     display: flex;
+    background: orange;
+    border-radius: 20px;
+    align-items: center;
     justify-content: center;
 }
 
@@ -98,7 +101,14 @@
 .lowerButtonAmountDiv{
     background-color: var(--grayish-blue);
     border-radius: 20px;
-    max-width: 200px;
+}
+
+.lowerTitelDiv{
+    padding-top: 50px;
+}
+
+.shoppingCartButtonDiv{
+    display: flex;
 }
 
 .lowerBootsPicObject{
@@ -112,8 +122,9 @@
 }
 
 .lowerTitelSpanSmall{
+    
     font-weight: 700;
-    color: var(--orange);
+    color: orange;
 }
 .lowerTitelSpanBig{
     font-weight: 700;
@@ -134,11 +145,27 @@
     border: none;
 }
 
+.addBtn{
+    display: flex;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.test{
+    color: white;
+    fill: white;
+}
+
 hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--grayish-blue);
     margin: 1em 0;
     padding: 0;
 }

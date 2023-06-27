@@ -8,33 +8,146 @@
   
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <div class="upperDiv">
+    <div>
+      <span class="upperTitelSpan" >sneakers</span>
+    </div>
+    <div class="upperItemsDiv">
+      <span class="upperItemsSpan" >Collections</span>
+      <span class="upperItemsSpan" >Men</span>
+      <span class="upperItemsSpan" >Women</span>
+      <span class="upperItemsSpan" >About</span>
+      <span class="upperItemsSpan" >Contact</span>
+    </div>
+    <div>
+      <object  data="images/icon-cart.svg">
+        Your fallback content
+      </object>
+    </div>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+    <div>
+      <object class="upperAvatarPicObject" data="images/image-avatar.png">
+        Your fallback content
+      </object>
+    </div>
+  
+    
+  </div>
 
-  Sneaker Company
+  <hr>
 
-  Fall Limited Edition Sneakers
+  <div class="lowerItemsDiv">
+    <div class="lowerBootsPicDiv">
+      <div>
+        <object class="lowerBootsPicObject" data="images/image-product-1.jpg">
+        Your fallback content
+      </object>
+    </div>
+      <div class="lowerSmallPicDiv">
+        <object class="lowerPicUnderBoots" data="images/image-product-1-thumbnail.jpg">
+          Your fallback content
+        </object>
+        <object class="lowerPicUnderBoots" data="images/image-product-2-thumbnail.jpg">
+          Your fallback content
+        </object>
+        <object class="lowerPicUnderBoots" data="images/image-product-3-thumbnail.jpg">
+          Your fallback content
+        </object>
+        <object class="lowerPicUnderBoots" data="images/image-product-4-thumbnail.jpg">
+          Your fallback content
+        </object>
+      </div>
+    </div>
+    <div class="lowerTextDiv">
+      <div>
+        <span class="lowerTitelSpanSmall">Sneaker Company</span>
+      </div>
+      <div>
+        <span class="lowerTitelSpanBig">Fall Limited Edition Sneakers</span>
+      </div>
+      <span class="lowerTextSpan" >These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </span>
+    
+    <div>
+      <div class="lowerPreisAndProzenteDiv">
+        <span class="lowerPreisSpan">$125.00</span>
+        <div class="lowerProzenteDiv">
+          <span class="lowerProzentSpan">50%</span>  
+        </div>
+        
+      </div>
+      <span style="text-decoration: line-through;">$250.00</span>
+    </div>
+      
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+      <div class="lowerButtonDiv">
+        <div class="lowerButtonAmountDiv">
+          <button class="btn">
+            <object type="image/svg+xml" data="images/icon-minus.svg">
+              Your fallback content here (e.g., an image)
+            </object>
+          </button>
+          <span>0</span>
+          <button class="amountBtn" >
+            <object type="image/svg+xml" data="images/icon-plus.svg">
+              Your fallback content here (e.g., an image)
+            </object>
+          </button >
+        </div>
+        <div>
+          
+          <buttonc class="addBtn">
+            <div class="lowerAddToCartButtonDiv">
+              <object type="image/svg+xml" data="images/icon-cart.svg">
+              Your fallback content here (e.g., an image)
+              </object>
+              <span>Add to cart</span>
+            </div>
+          </button>
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <!--
 
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  <object type="image/svg+xml" data="images/icon-close.svg">
+    Your fallback content here (e.g., an image)
+  </object>
+  <object type="image/svg+xml" data="images/icon-delete.svg">
+    Your fallback content here (e.g., an image)
+  </object>
+  <object type="image/svg+xml" data="images/icon-menu.svg">
+    Your fallback content here (e.g., an image)
+  </object>
+  <object type="image/svg+xml" data="images/icon-minus.svg">
+    Your fallback content here (e.g., an image)
+  </object>
+  <object type="image/svg+xml" data="images/icon-next.svg">
+    Your fallback content here (e.g., an image)
+  </object>
+  <object type="image/svg+xml" data="images/icon-plus.svg">
+    Your fallback content here (e.g., an image)
+  </object>
+  <object type="image/svg+xml" data="images/icon-previous.svg">
+    Your fallback content here (e.g., an image)
+  </object>
+  -->
+  
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

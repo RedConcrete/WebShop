@@ -1,0 +1,150 @@
+
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+:root {
+    
+--orange: hsl(26, 100%, 55%);
+--pale-orange: hsl(25, 100%, 94%);
+
+--very-dark-blue: hsl(220, 13%, 13%);
+--dark-grayish-blue: hsl(219, 9%, 45%);
+--grayish-blue: hsl(220, 14%, 75%);
+--light-grayish-blue: hsl(223, 64%, 98%);
+--white: hsl(0, 0%, 100%);
+--black: hsl(0, 0%, 0%); /* with 75% opacity for lightbox background */
+
+}
+
+/* MOBILE */
+@media only screen and (max-width: 400px) {}
+
+/* Desktop */
+@media only screen and (min-width: 400px) {
+
+.upperDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.upperItemsDiv{
+    display: flex;
+    margin-right: 30%;
+}
+
+.upperTitelSpan{
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.upperItemsSpan{
+    font-size: large;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: var(--dark-grayish-blue);
+}
+
+.upperAvatarPicObject{
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.lowerItemsDiv{
+    display: flex;
+}
+
+.lowerBootsPicDiv{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+}
+}
+
+.lowerPreisAndProzenteDiv{
+    display: flex;
+    align-items: center;
+}
+
+.lowerTextDiv{
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    justify-content: space-around;
+}
+
+.lowerProzenteDiv{
+    background-color: var(--pale-orange);
+    padding: 5px;
+    border-radius: 20%;
+}
+
+.lowerAddToCartButtonDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.lowerSmallPicDiv{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+.lowerButtonDiv{
+    display: flex;
+}
+
+.lowerButtonAmountDiv{
+    background-color: var(--grayish-blue);
+    border-radius: 20px;
+    max-width: 200px;
+}
+
+.lowerBootsPicObject{
+    border-radius: 20px;
+    max-width: 500px;
+}
+
+.lowerPicUnderBoots{
+    border-radius: 20px;
+    max-width: 100px;
+}
+
+.lowerTitelSpanSmall{
+    font-weight: 700;
+    color: var(--orange);
+}
+.lowerTitelSpanBig{
+    font-weight: 700;
+    font-size: 40px;
+}
+.lowerPreisSpan{
+    font-size: x-large;
+    font-weight: 700;
+    padding-right: 1%;
+}
+
+.lowerTextSpan{
+    display: flex;
+}
+
+.amountBtn{
+    background-color: transparent;
+    border: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

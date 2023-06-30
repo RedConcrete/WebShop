@@ -14,11 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
   <div class="upperDiv">
     <div>
       <object type="image/svg+xml" data="images/logo.svg">
@@ -33,9 +32,11 @@
       <span class="upperItemsSpan" >Contact</span>
     </div>
     <div>
-      <object  data="images/icon-cart.svg">
+      <button onclick="openCart()">
+        <object  data="images/icon-cart.svg">
         Your fallback content
       </object>
+    </button>  
     </div>
 
     <div>
@@ -43,8 +44,6 @@
         Your fallback content
       </object>
     </div>
-  
-    
   </div>
 
   <hr>
@@ -52,64 +51,60 @@
   <div class="lowerItemsDiv">
     <div class="lowerBootsPicDiv">
       <div>
-        <object class="lowerBootsPicObject" data="images/image-product-1.jpg">
-        Your fallback content
-      </object>
+      <img id="imgClickAndChange" class="lowerBootsPicObject" src="images/image-product-1.jpg">
     </div>
       <div class="lowerSmallPicDiv">
-        <object class="lowerPicUnderBoots" data="images/image-product-1-thumbnail.jpg">
-          Your fallback content
-        </object>
-        <object class="lowerPicUnderBoots" data="images/image-product-2-thumbnail.jpg">
-          Your fallback content
-        </object>
-        <object class="lowerPicUnderBoots" data="images/image-product-3-thumbnail.jpg">
-          Your fallback content
-        </object>
-        <object class="lowerPicUnderBoots" data="images/image-product-4-thumbnail.jpg">
-          Your fallback content
-        </object>
+        <img class="lowerPicUnderBoots" src="images/image-product-1-thumbnail.jpg" onclick="changeImage('images/image-product-1.jpg')">
+        <img class="lowerPicUnderBoots" src="images/image-product-2-thumbnail.jpg" onclick="changeImage('images/image-product-2.jpg')">
+        <img class="lowerPicUnderBoots" src="images/image-product-3-thumbnail.jpg" onclick="changeImage('images/image-product-3.jpg')">
+        <img class="lowerPicUnderBoots" src="images/image-product-4-thumbnail.jpg" onclick="changeImage('images/image-product-4.jpg')">
       </div>
     </div>
     <div class="lowerTextDiv">
       <div class="lowerTitelDiv">
         <span class="lowerTitelSpanSmall">Sneaker Company</span>
       </div>
-      <div>
+      <div class="lowerTitelSpanBigDiv">
         <span class="lowerTitelSpanBig">Fall Limited Edition Sneakers</span>
+      </div >
+      <div class="lowerTextSpanDiv"> 
+        <span class="lowerTextSpan" >These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </span>
       </div>
-      <span class="lowerTextSpan" >These low-profile sneakers are your perfect casual wear companion. Featuring a 
-        durable rubber outer sole, they’ll withstand everything the weather can offer.
-      </span>
-    
-    <div>
-      <div class="lowerPreisAndProzenteDiv">
-        <span class="lowerPreisSpan">$125.00</span>
-        <div class="lowerProzenteDiv">
-          <span class="lowerProzentSpan">50%</span>  
-        </div>
-        
+      <div class="lowerPreisAndProzenteDivDiv">
+          <div class="lowerPreisAndProzenteDiv">
+            <span class="lowerPreisSpan">
+              $125.00
+            </span>
+          <div class="lowerProzenteDiv">
+              <span class="lowerProzentSpan">
+                50%
+              </span>  
+            </div>
+          </div>
+        <span class="">
+          $250.00
+        </span>
       </div>
-      <span style="text-decoration: line-through;">$250.00</span>
-    </div>
       <div class="lowerButtonDiv">
         <div class="lowerButtonAmountDiv">
-          <button class="amountBtn">
+          <button onclick="decreaseAmount()" class="amountBtn">
             <object type="image/svg+xml" data="images/icon-minus.svg">
               Your fallback content here (e.g., an image)
             </object>
           </button>
-          <span>0</span>
-          <button class="amountBtn" >
+          <span id="amountSpan">0</span>
+          <button onclick="increaseAmount()" class="amountBtn" >
             <object type="image/svg+xml" data="images/icon-plus.svg">
               Your fallback content here (e.g., an image)
             </object>
           </button >
         </div>
-        <div>
-          <button class="addBtn">
+        <div class="addBtnDiv">
+          <button onclick="addToCart()" class="addBtn">
               <div class="shoppingCartButtonDiv">
-                <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                <svg style="padding-right: 10px;" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896
                  0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099
                   20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555
@@ -119,15 +114,16 @@
                       0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383
                        5.53Z" fill="white" fill-rule="nonzero"/>
                 </svg>
-              </div>
-                <span class="BtnSpan"> Add to cart </span>
+                <span class="BtnSpan">
+                   Add to cart 
+                </span>
               </div>
           </button>
         </div>
       </div>
-      
-      
     </div>
+
+    <div id="includedContent"></div>
   </div>
   <!--
 
@@ -153,8 +149,6 @@
     Your fallback content here (e.g., an image)
   </object>
   -->
-  
-  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

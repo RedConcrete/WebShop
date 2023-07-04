@@ -22,7 +22,6 @@
   
   .item {
     display: flex;
-    width: 350px;
     height: 60px;
     padding: 10px;
     text-align: center;
@@ -42,7 +41,7 @@
     color: #fff;
     font-size: 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
   }
 
   .cartTitel{

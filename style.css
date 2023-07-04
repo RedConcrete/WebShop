@@ -1,209 +1,414 @@
-
 * {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
 :root {
-    
---orange: hsl(26, 100%, 55%);
---pale-orange: hsl(25, 100%, 94%);
 
---very-dark-blue: hsl(220, 13%, 13%);
---dark-grayish-blue: hsl(219, 9%, 45%);
---grayish-blue: hsl(220, 14%, 75%);
---light-grayish-blue: hsl(223, 64%, 98%);
---white: hsl(0, 0%, 100%);
---black: hsl(0, 0%, 0%); /* with 75% opacity for lightbox background */
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    /* with 75% opacity for lightbox background */
 
 }
 
 /* MOBILE */
-@media only screen and (max-width: 400px) {
-
-    
-}
+@media only screen and (max-width: 400px) {}
 
 /* Desktop */
 @media only screen and (min-width: 400px) {
 
-.upperDiv{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    .upperDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .upperItemsDiv {
+        display: flex;
+        margin-right: 30%;
+    }
+
+    .upperTitelSpan {
+        font-size: xx-large;
+        font-weight: 700;
+    }
+
+    .upperItemsSpan {
+        font-size: large;
+        padding-left: 5%;
+        padding-right: 5%;
+        color: var(--dark-grayish-blue);
+    }
+
+    .upperAvatarPicObject {
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .lowerItemsDiv {
+        display: flex;
+        padding-top: 60px;
+        padding-bottom: 300px;
+    }
+
+    .lowerBootsPicDiv {
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px;
+    }
+
+    .lowerPreisAndProzenteDiv {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+    .lowerTextDiv {
+        display: flex;
+        flex-direction: column;
+        padding-left: 150px;
+        width: 400px;
+    }
+
+    .lowerProzenteDiv {
+        background-color: var(--pale-orange);
+        padding: 5px;
+        border-radius: 20%;
+    }
+
+    .lowerAddToCartButtonDiv {
+        display: flex;
+        background: orange;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lowerSmallPicDiv {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5%;
+    }
+
+    .lowerButtonDiv {
+        display: flex;
+    }
+
+    .lowerButtonAmountDiv {
+        background-color: var(--light-grayish-blue);
+        border-radius: 5px;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .lowerTitelDiv {
+        padding-bottom: 15px;
+        padding-top: 50px;
+    }
+
+    .shoppingCartButtonDiv {
+        display: flex;
+    }
+
+    .lowerTitelSpanBigDiv {
+        padding-bottom: 35px;
+    }
+
+    .lowerTextSpanDiv {
+        padding-bottom: 30px;
+    }
+
+    .lowerPreisAndProzenteDivDiv {
+        padding-bottom: 50px;
+    }
+
+    .addBtnDiv {
+        padding-left: 20px;
+    }
+
+    .lowerBootsPicObject {
+        border-radius: 20px;
+        max-width: 450px;
+    }
+
+    .lowerPicUnderBoots {
+        border-radius: 20px;
+        max-width: 100px;
+    }
+
+    .lowerTitelSpanSmall {
+        font-weight: 700;
+        color: orange;
+    }
+
+    .lowerTitelSpanBig {
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .lowerPreisSpan {
+        font-size: x-large;
+        font-weight: 700;
+        padding-right: 10px;
+    }
+
+    .lowerTextSpan {
+        display: flex;
+        color: var(--dark-grayish-blue);
+    }
+
+    .amountBtn {
+        background-color: transparent;
+        border: none;
+        width: 100px;
+        height: 50px;
+    }
+
+    .addBtn {
+        display: flex;
+        color: white;
+        background-color: orange;
+        border: none;
+        border-radius: 5px;
+        width: 250px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn {
+        border: none;
+        width: 100px;
+        height: 50px;
+        background-color: transparent;
+    }
+
+    .test {
+        color: white;
+        fill: white;
+    }
+
+    .BtnImage {
+        border: none;
+        background-color: transparent;
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid var(--grayish-blue);
+        margin: 1em 0;
+        padding: 0;
+    }
+
+
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        padding-top: 100px;
+        /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+    * {
+        box-sizing: border-box
+    }
+    
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+    
+    .mySlides {
+        display: none;
+    }
+    
+    img {
+        vertical-align: middle;
+        border-radius: 20px;
+    }
+    
+    .btn{
+        background-color: transparent;
+        border: none;
+    }
+    
+    svg{
+        background-color: transparent;
+    }
+    
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border: none;
+        border-radius: 50px;
+        user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+        right: -5%;
+    }
+    .prev{
+        left: -5%; 
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(255, 255, 255,);
+    }
+    
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+    
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    path:hover{
+        fill: orange;
+    }
+    
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 0.5s;
+    }
+
+    .btnClose{
+        background-color: transparent;
+        border: none;
+        padding-left: 800px;
+        padding-bottom: 10px;
+    }
+    
+    .modal{
+        display: block;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+    
+        to {
+            opacity: 1
+        }
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+    
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+
 }
 
-.upperItemsDiv{
-    display: flex;
-    margin-right: 30%;
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
 }
 
-.upperTitelSpan{
-    font-size: xx-large;
-    font-weight: 700;
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
-
-.upperItemsSpan{
-    font-size: large;
-    padding-left: 5%;
-    padding-right: 5%;
-    color: var(--dark-grayish-blue);
-}
-
-.upperAvatarPicObject{
-    max-width: 60px;
-    max-height: 60px;
-}
-
-.lowerItemsDiv{
-    display: flex;
-    padding-top: 60px;
-}
-
-.lowerBootsPicDiv{
-    display: flex;
-    flex-direction: column;
-    padding-left: 150px;
-}
-
-.lowerPreisAndProzenteDiv{
-    display: flex;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-.lowerTextDiv{
-    display: flex;
-    flex-direction: column;
-    padding-left: 150px;
-    width: 400px;
-}
-
-.lowerProzenteDiv{
-    background-color: var(--pale-orange);
-    padding: 5px;
-    border-radius: 20%;
-}
-
-.lowerAddToCartButtonDiv{
-    display: flex;
-    background: orange;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.lowerSmallPicDiv{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 5%;
-}
-
-.lowerButtonDiv{
-    display: flex;
-}
-
-.lowerButtonAmountDiv{
-    background-color: var(--light-grayish-blue);
-    border-radius: 5px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.lowerTitelDiv{
-    padding-bottom: 15px;
-    padding-top: 50px;
-}
-
-.shoppingCartButtonDiv{
-    display: flex;
-}
-
-.lowerTitelSpanBigDiv{
-    padding-bottom: 35px;
-}
-
-.lowerTextSpanDiv{
-    padding-bottom: 30px;
-}
-
-.lowerPreisAndProzenteDivDiv{
-    padding-bottom: 50px;
-}
-
-.addBtnDiv{
-    padding-left: 20px;
-}
-
-.lowerBootsPicObject{
-    border-radius: 20px;
-    max-width: 450px;
-}
-
-.lowerPicUnderBoots{
-    border-radius: 20px;
-    max-width: 100px;
-}
-
-.lowerTitelSpanSmall{
-    font-weight: 700;
-    color: orange;
-}
-.lowerTitelSpanBig{
-    font-weight: 700;
-    font-size: 40px;
-}
-.lowerPreisSpan{
-    font-size: x-large;
-    font-weight: 700;
-    padding-right: 10px;
-}
-
-.lowerTextSpan{
-    display: flex;
-    color: var(--dark-grayish-blue);
-}
-
-.amountBtn{
-    background-color: transparent;
-    border: none;
-    width: 100px;
-    height: 50px;
-}
-
-.addBtn{
-    display: flex;
-    color: white;
-    background-color: orange;
-    border: none;
-    border-radius: 5px;
-    width: 250px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-}
-
-  
-.test{
-    color: white;
-    fill: white;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid var(--grayish-blue);
-    margin: 1em 0;
-    padding: 0;
-}
-}
-
-
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }

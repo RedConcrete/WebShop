@@ -11,6 +11,8 @@ var imageNumber;
 var i = 0;
 var computedStyle;
 
+let desktopSize = 400;
+
 document.addEventListener('DOMContentLoaded', function () {
 
 
@@ -58,11 +60,11 @@ function addToCart() {
     calcCost();
 }
 
-function checkout(){
+function checkout() {
     console.log("Checkout");
 }
 
-function onDeleteButton(){
+function onDeleteButton() {
     console.log("Delete");
 }
 
@@ -134,10 +136,33 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+function plusSlidesMobile(n) {
+    showSlidesMobile(slideIndex += n);
+}
+
+function currentSlideMobile(n) {
+    showSlidesMobile(slideIndex = n);
+}
+
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
+    console.log("current Slide: " + n);
     if (n > slides.length) { slideIndex = 1 }
+    console.log("current slideIndex: " + slideIndex);
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+}
+
+function showSlidesMobile(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlidesMobile");
+    console.log("current Slide: " + n);
+    if (n > slides.length) { slideIndex = 1 }
+    console.log("current slideIndex: " + slideIndex);
     if (n < 1) { slideIndex = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
@@ -154,4 +179,13 @@ function openModal(n) {
 function closeModal() {
     var modal = document.getElementById("myModal");
     modal.style.display = "none";
+}
+
+function myFunction() {
+    var topnav = document.getElementById("topnav");
+    if (topnav.style.display === "flex") {
+        topnav.style.display = "none";
+    } else {
+        topnav.style.display = "flex";
+    }
 }

@@ -18,10 +18,611 @@
 }
 
 /* MOBILE */
-@media only screen and (max-width: 400px) {}
+@media only screen and (max-width: 400px) {
 
-/* Desktop */
+    .headerDiv {
+        display: flex;
+        align-items: center;
+        height: 80px;
+    }
+
+    .PreisSpanVorRabatt {
+        color: var(--grayish-blue);
+        text-decoration: line-through;
+        margin-left: 120px;
+    }
+
+    .lowerProzentSpan {
+        color: var(--orange);
+        font-weight: 600;
+    }
+
+    .upperItemsDiv {
+        display: none;
+    }
+
+    .Logo {
+        margin-right: 90px;
+    }
+
+    .closeBtnMobileContainer {
+        border: none;
+        background-color: transparent;
+        margin-left: -80px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .emptyCart {
+        height: 200px;
+    }
+
+    .emptyCartSpan {
+        }
+
+    .mobile-container {
+        position: absolute;
+        display: flex;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .topnav {
+        display: none;
+        background-color: white;
+        align-items: center;
+        flex-direction: column;
+        width: 200px;
+        height: 1005px;
+    }
+
+    .topnav a {
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+
+    .menuSpan {
+        font-size: large;
+        padding-left: 5%;
+        padding-right: 5%;
+        color: var(--dark-grayish-blue);
+    }
+
+    .topnav a:hover {}
+
+    .active {
+        margin-left: 20px;
+        margin-right: 15px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    * {
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    /* MOBILE */
+    .cart {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: 20px;
+        right: -75px;
+        border-radius: 20px;
+        width: 375px;
+        z-index: 1;
+    }
+
+    /* MOBILE */
+    .lowerBootsPicDiv {
+        display: none;
+    }
+
+    .deleteButton {
+        background-color: transparent;
+        border: none;
+        padding-left: 50px;
+    }
+
+    .modalImg {
+        width: 375px;
+    }
+
+    .cart h2 {
+        text-align: center;
+    }
+
+    .cart-items {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item {
+        display: flex;
+        height: 60px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .item img {
+        border-radius: 10px;
+    }
+
+    .cartSpan {
+        font-size: large;
+        padding-top: 10%;
+        color: var(--dark-grayish-blue);
+    }
+
+    .checkout {
+        display: none;
+        width: 300px;
+        height: 75px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #ff6600;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .cartTitel {
+        padding: 10px;
+        padding-bottom: 150px;
+    }
+
+    /* mobile */
+    .lowerTextDiv {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .upperTitelSpan {
+        font-size: xx-large;
+        font-weight: 700;
+    }
+
+    .upperItemsSpan {}
+
+    .upperAvatarPicObject {
+        width: 30px;
+        margin-left: 20px;
+    }
+
+    .productItemsDiv {}
+
+    .lowerPreisAndProzenteDiv {
+        display: flex;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+
+    .lowerProzenteDiv {
+        background-color: var(--pale-orange);
+        padding: 5px;
+        border-radius: 20px;
+    }
+
+    .lowerAddToCartButtonDiv {
+        display: flex;
+        background: orange;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lowerSmallPicDiv {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5%;
+    }
+
+    .lowerButtonDiv {
+        display: flex;
+        flex-direction: column;
+        /* align-content: center; */
+        align-items: center;
+        margin-left: 75px;
+    }
+
+    .lowerButtonAmountDiv {
+        background-color: var(--light-grayish-blue);
+        border-radius: 5px;
+        width: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .lowerTitelDiv {
+        -bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .shoppingCartButtonDiv {
+        display: flex;
+    }
+
+    .lowerTitelSpanBigDiv {
+        padding-bottom: 35px;
+        padding-left: 30px;
+        width: 300px;
+    }
+
+
+
+    .lowerPreisAndProzenteDivDiv {
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+
+
+
+    .lowerBootsPicObject {
+        border-radius: 20px;
+        max-width: 450px;
+    }
+
+    .lowerPicUnderBoots {
+        border-radius: 20px;
+        max-width: 100px;
+    }
+
+    .lowerTitelSpanSmall {
+        padding-left: 30px;
+        font-weight: 700;
+        width: 100px;
+        color: orange;
+    }
+
+    .lowerTitelSpanBig {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .lowerPreisSpan {
+        font-size: x-large;
+        font-weight: 700;
+        padding-right: 10px;
+    }
+
+
+    .lowerTextSpanDiv {
+        padding-bottom: 30px;
+
+    }
+
+    .lowerTextSpan {
+        display: flex;
+        color: var(--dark-grayish-blue);
+        padding-left: 30px;
+        width: 370px;
+    }
+
+    .amountBtn {
+        background-color: transparent;
+        border: none;
+        width: 100px;
+        height: 50px;
+    }
+
+    .addBtn {
+        display: flex;
+        color: white;
+        background-color: orange;
+        border: none;
+        border-radius: 5px;
+        width: 320px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+
+    .btn {
+        border: none;
+        width: 100px;
+        height: 50px;
+        background-color: transparent;
+    }
+
+    .test {
+        color: white;
+        fill: white;
+    }
+
+    .BtnImage {
+        border: none;
+        background-color: transparent;
+    }
+
+    hr {
+        display: none;
+        visibility: hidden;
+    }
+
+    .modalMobile {}
+
+    .modalContent {
+        display: none;
+        visibility: hidden;
+    }
+
+    .modalContentMobile {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+        margin: 0
+    }
+
+    .mySlidesMobile {
+        display: none;
+    }
+
+    .btn {
+        background-color: transparent;
+        border: none;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 500px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: var(--white);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border: none;
+        border-radius: 50px;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 5%;
+        width: 55px;
+    }
+
+    .prev {
+        left: 5%;
+        width: 55px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(255, 255, 255, );
+    }
+
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .closeBtn {
+        fill: white;
+    }
+
+    .closeBtn:hover {
+        fill: orange;
+    }
+
+    /* Fading animation */
+    .fade {}
+
+    .btnClose {
+        display: none;
+        visibility: hidden;
+        background-color: transparent;
+        border: none;
+        padding-left: 300px;
+    }
+
+    .svg-left {
+        margin-right: 100px;
+    }
+
+    .svg-right {
+        margin-right: -100px;
+    }
+
+
+    .svg:hover {
+        stroke: orange;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    * {
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    .deleteButton {
+        background-color: transparent;
+        border: none;
+        padding-left: 50px;
+    }
+
+    .cart h2 {
+        text-align: center;
+    }
+
+    .cart-items {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item {
+        display: none;
+        height: 60px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    
+
+    .item img {
+        border-radius: 10px;
+    }
+
+    .cartSpan {
+        font-size: large;
+        padding-top: 10%;
+        color: var(--dark-grayish-blue);
+    }
+
+    .checkout {
+        display: none;
+        width: 300px;
+        height: 75px;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #ff6600;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .TextCalcAmount {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        color: gray;
+    }
+
+}
+
+/* MOBILE */
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+/* Desktop*/
 @media only screen and (min-width: 400px) {
+
+
+
+    .mobile-container {
+        display: none;
+    }
+
+    .upperItemsSpan {
+        display: none;
+    }
+
+    /* Desktop*/
+    .modalImg {
+        width: 500px;
+    }
+
+    .menuSpan {
+        font-size: large;
+        padding-left: 5%;
+        padding-right: 5%;
+        color: var(--dark-grayish-blue);
+    }
 
     .headerDiv {
         display: flex;
@@ -40,6 +641,7 @@
     }
 
     .upperItemsSpan {
+        display: block;
         font-size: large;
         padding-left: 5%;
         padding-right: 5%;
@@ -53,6 +655,7 @@
 
     .productItemsDiv {
         display: flex;
+        justify-content: center;
         padding-top: 60px;
         padding-bottom: 300px;
     }
@@ -60,7 +663,6 @@
     .lowerBootsPicDiv {
         display: flex;
         flex-direction: column;
-        padding-left: 150px;
     }
 
     .lowerPreisAndProzenteDiv {
@@ -72,7 +674,7 @@
     .lowerTextDiv {
         display: flex;
         flex-direction: column;
-        padding-left: 250px;
+        margin-left: 150px;
         width: 500px;
     }
 
@@ -103,7 +705,7 @@
     .lowerButtonAmountDiv {
         background-color: var(--light-grayish-blue);
         border-radius: 5px;
-        width: 150px;
+        width: 320px;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -128,10 +730,6 @@
 
     .lowerPreisAndProzenteDivDiv {
         padding-bottom: 50px;
-    }
-
-    .addBtnDiv {
-        padding-left: 20px;
     }
 
     .lowerBootsPicObject {
@@ -210,33 +808,19 @@
         padding: 0;
     }
 
-
-    .modal {
-        display: none;
-        /* Hidden by default */
-        position: fixed;
-        /* Stay in place */
-        z-index: 1;
-        /* Sit on top */
-        padding-top: 100px;
-        /* Location of the box */
-        left: 0;
-        top: 0;
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        overflow: auto;
-        /* Enable scroll if needed */
-    }
-
     .modalContent {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     }
 
-    /* Modal Content */
+    .modalContentMobile {
+        visibility: hidden;
+        display: none;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
     .modal-content {
         background-color: #fefefe;
         margin: auto;
@@ -245,7 +829,6 @@
         width: 80%;
     }
 
-    /* The Close Button */
     .close {
         color: #aaaaaa;
         float: right;
@@ -284,18 +867,12 @@
         border: none;
     }
 
-    svg {
-        background-color: transparent;
-    }
-
-    /* Slideshow container */
     .slideshow-container {
         max-width: 500px;
         position: relative;
         margin: auto;
     }
 
-    /* Next & previous buttons */
     .prev,
     .next {
         cursor: pointer;
@@ -313,7 +890,6 @@
         user-select: none;
     }
 
-    /* Position the "next button" to the right */
     .next {
         right: -5%;
         width: 55px;
@@ -324,13 +900,11 @@
         width: 55px;
     }
 
-    /* On hover, add a black background color with a little bit see-through */
     .prev:hover,
     .next:hover {
         background-color: rgba(255, 255, 255, );
     }
 
-    /* Caption text */
     .text {
         color: #f2f2f2;
         font-size: 15px;
@@ -341,7 +915,6 @@
         text-align: center;
     }
 
-    /* Number text (1/3 etc) */
     .numbertext {
         color: #f2f2f2;
         font-size: 12px;
@@ -350,7 +923,6 @@
         top: 0;
     }
 
-    /* The dots/bullets/indicators */
     .dot {
         cursor: pointer;
         height: 15px;
@@ -360,6 +932,11 @@
         border-radius: 50%;
         display: inline-block;
         transition: background-color 0.6s ease;
+    }
+
+    .active {
+        display: none;
+        visibility: hidden;
     }
 
     .active,
@@ -375,7 +952,6 @@
         fill: orange;
     }
 
-    /* Fading animation */
     .fade {}
 
     .btnClose {
@@ -388,8 +964,16 @@
         stroke: orange;
     }
 
+    /* Desktop */
     .modal {
-        display: block;
+        display: none;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.4);
     }
@@ -430,8 +1014,8 @@
         border-radius: 20px;
         width: 400px;
     }
-    
-    .deleteButton{
+
+    .deleteButton {
         background-color: transparent;
         border: none;
         padding-left: 50px;
@@ -489,6 +1073,9 @@
 
 }
 
+/* Desktop*/
+
+/**
 
 .attribution {
     font-size: 11px;

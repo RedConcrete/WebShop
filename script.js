@@ -1,5 +1,6 @@
 
 let amount = 0;
+let currentAmount = 0;
 let cost = 125;
 let finalCosts = 0;
 let amountSpan;
@@ -41,31 +42,82 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function calcCost() {
-    finalCosts = cost * amount;
 
+    finalCosts = cost * amount;
     console.log(finalCosts);
 }
 
 function decreaseAmount() {
-    amount--;
-    amountSpan = document.getElementById("amountSpan").innerHTML = amount;
+
+    if (currentAmount > 0) {
+        currentAmount--;
+        amountSpan = document.getElementById("amountSpan").innerHTML = currentAmount;
+    }
+
+    if (amount <= 0) {
+
+    }
+
 }
 
 function increaseAmount() {
-    amount++;
-    amountSpan = document.getElementById("amountSpan").innerHTML = amount;
+    currentAmount++;
+    amountSpan = document.getElementById("amountSpan").innerHTML = currentAmount;
 }
 
 function addToCart() {
-    calcCost();
+    var itemCart = document.getElementById("item");
+    var EmptyCart = document.getElementById("emptyCart");
+    var priceLabel = document.getElementById("totalPrice");
+    var amountLabel = document.getElementById("amount");
+    
+    if (currentAmount > 0) {
+        
+        amount = amount + currentAmount;
+        console.log(amount);
+        console.log(currentAmount);
+        calcCost();
+        priceLabel = document.getElementById("totalPrice").innerHTML = finalCosts + "$";
+        amountLabel = document.getElementById("amount").innerHTML =" x " + amount + " ";
+        EmptyCart.style.display = "none";
+        itemCart.style.display = "flex";
+    }
+    else {
+        EmptyCart.style.display = "flex";
+        itemCart.style.display = "none";
+        console.log("nothing to add!");
+    }
 }
 
 function checkout() {
     console.log("Checkout");
 }
 
-function onDeleteButton() {
+function on
+() {
     console.log("Delete");
+
+    var itemCart = document.getElementById("item");
+    var EmptyCart = document.getElementById("emptyCart");
+    
+    EmptyCart.style.display = "flex";
+    itemCart.style.display = "none";
+    console.log("nothing to add!");
+
+    amount = 0;
+}
+
+function onMinus(){
+    var itemCart = document.getElementById("item");
+    var EmptyCart = document.getElementById("emptyCart");
+    amount = amount - 1;
+    calcCost();
+    priceLabel = document.getElementById("totalPrice").innerHTML = finalCosts + "$";
+    amountLabel = document.getElementById("amount").innerHTML =" x " + amount + " ";
+    if(finalCosts == 0){
+        EmptyCart.style.display = "flex";
+        itemCart.style.display = "none";  
+    }
 }
 
 function changeImage(image) {

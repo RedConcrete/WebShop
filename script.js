@@ -82,19 +82,13 @@ function addToCart() {
         EmptyCart.style.display = "none";
         itemCart.style.display = "flex";
     }
-    else {
-        EmptyCart.style.display = "flex";
-        itemCart.style.display = "none";
-        console.log("nothing to add!");
-    }
 }
 
 function checkout() {
     console.log("Checkout");
 }
 
-function on
-() {
+function onDeleteButton() {
     console.log("Delete");
 
     var itemCart = document.getElementById("item");

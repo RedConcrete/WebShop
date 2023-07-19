@@ -146,12 +146,12 @@
         border: none;
     }
 
-    .minusDiv{
+    .minusDiv {
         display: flex;
         margin-left: 10px;
     }
 
-    .deleteDiv{
+    .deleteDiv {
         display: flex;
         margin-left: 10px;
     }
@@ -617,6 +617,22 @@
         left: 54vw;
     }
 
+    .localButtonDE {
+        display: block;
+        background-color: rgb(209, 209, 209);
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .localButtonEN {
+        display: none;
+        background-color: rgb(209, 209, 209);
+        border: none;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
     .mobile-container {
         display: none;
     }
@@ -802,12 +818,12 @@
         background-color: transparent;
     }
 
-    .minusDiv{
+    .minusDiv {
         display: flex;
         margin-left: 10px;
     }
 
-    .deleteDiv{
+    .deleteDiv {
         display: flex;
         margin-left: 10px;
     }
@@ -1097,6 +1113,7 @@
         padding-left: 10px;
         font-weight: 700;
     }
+
 }
 
 .minus {

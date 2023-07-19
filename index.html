@@ -77,11 +77,11 @@
         <div id="myLinks" style="
         margin-left: -60px;
     ">
-          <a class="menuSpan">Collections</a>
-          <a class="menuSpan">Men</a>
-          <a class="menuSpan">Women</a>
-          <a class="menuSpan">About</a>
-          <a class="menuSpan">Contact</a>
+          <a data-lang="collections" class="menuSpan">Collections</a>
+          <a data-lang="men" class="menuSpan">Men</a>
+          <a data-lang="women" class="menuSpan">Women</a>
+          <a data-lang="about" class="menuSpan">About</a>
+          <a data-lang="contact" class="menuSpan">Contact</a>
         </div>
       </div>
     </div>
@@ -95,11 +95,11 @@
       </object>
     </div>
     <div class="upperItemsDiv">
-      <span class="upperItemsSpan">Collections</span>
-      <span class="upperItemsSpan">Men</span>
-      <span class="upperItemsSpan">Women</span>
-      <span class="upperItemsSpan">About</span>
-      <span class="upperItemsSpan">Contact</span>
+      <span data-lang="collections" class="upperItemsSpan">Collections</span>
+      <span data-lang="men" class="upperItemsSpan">Men</span>
+      <span data-lang="women" class="upperItemsSpan">Women</span>
+      <span data-lang="about" class="upperItemsSpan">About</span>
+      <span data-lang="contact" class="upperItemsSpan">Contact</span>
     </div>
     <div>
       <div class="dropdown">
@@ -109,7 +109,7 @@
         <div class="dropdown-content">
           <div class="cart">
             <div class="cartTitel">
-              <span class="cartSpan">Cart</span>
+              <span  data-lang="cart" class="cartSpan">Cart</span>
             </div>
             <hr>
             <div class="cart-items">
@@ -163,23 +163,25 @@
                 </div>
               </div>
               <div id="emptyCart" class="emptyCart">
-                <span class="emptyCartSpan">
+                <span data-lang="emptyCart" class="emptyCartSpan">
                   Your cart is empty
                 </span>
               </div>
 
             </div>
-            <button class="checkout" onclick="checkout()">Checkout</button>
+            <button data-lang="checkout" class="checkout" onclick="checkout()">Checkout</button>
           </div>
         </div>
       </div>
     </div>
-
     <div>
       <object class="upperAvatarPicObject" data="images/image-avatar.png">
         Your fallback content
       </object>
     </div>
+
+    <button id="buttonDE" class="localButtonDE" onclick="selectLanguage('de')">DE</button>
+    <button id="buttonEN" class="localButtonEN" onclick="selectLanguage('en')">EN</button>
   </div>
 
   <hr class="hr">
@@ -264,7 +266,7 @@
         <span class="lowerTitelSpanBig">Fall Limited Edition Sneakers</span>
       </div>
       <div class="lowerTextSpanDiv">
-        <span class="lowerTextSpan">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        <span data-lang="text" class="lowerTextSpan">These low-profile sneakers are your perfect casual wear companion. Featuring a
           durable rubber outer sole, they’ll withstand everything the weather can offer.
         </span>
       </div>
@@ -325,7 +327,7 @@
                       0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383
                        5.53Z" fill="white" fill-rule="nonzero" />
               </svg>
-              <span class="BtnSpan">
+              <span data-lang="addToCart" class="BtnSpan">
                 Add to cart
               </span>
             </div>
@@ -363,7 +365,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Franz Klose</a>.
   </div>
 </body>
 

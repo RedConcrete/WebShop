@@ -1,18 +1,42 @@
 
 let amount = 0;
 let currentAmount = 0;
-let cost = 125;
+const cost = 125;
 let finalCosts = 0;
 let amountSpan;
 
-var ul;
+let ul;
 var liItems;
 var imageWidth;
 var imageNumber;
-var i = 0;
+let i = 0;
 var computedStyle;
 
 let desktopSize = 400;
+
+let langMap = {
+    collections:
+        { en: "Collections", de: "Kollektion" },
+    men:
+        { en: "Men", de: "Mann" },
+    women:
+        { en: "Women", de: "Frau" },
+    about:
+        { en: "About", de: "Über" },
+    contact:
+        { en: "Contact", de: "Kontakt" },
+    cart:
+        { en: "Cart", de: "Einkaufswagen" },
+    emptyCart:
+        { en: "Your cart is empty", de: "Ihr Einkaufswagen ist Leer" },
+    text:
+        { en: "These low-profile sneakers are your perfect casual wear companion. Featuring adurable rubber outer sole, they’ll withstand everything the weather can offer.", de: "Diese Low-Profile-Sneaker sind Ihr perfekter Freizeitbegleiter. Dank der robusten Gummiaußensohle halten sie allem stand, was das Wetter zu bieten hat." },
+    addToCart:
+        { en: "Add To Cart", de: "zum Einkaufswagen hinzufügen" },
+    checkout:
+        { en: "checkout", de: "zur Kasse" },
+};
+
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -70,15 +94,15 @@ function addToCart() {
     var EmptyCart = document.getElementById("emptyCart");
     var priceLabel = document.getElementById("totalPrice");
     var amountLabel = document.getElementById("amount");
-    
+
     if (currentAmount > 0) {
-        
+
         amount = amount + currentAmount;
         console.log(amount);
         console.log(currentAmount);
         calcCost();
         priceLabel = document.getElementById("totalPrice").innerHTML = finalCosts + "$";
-        amountLabel = document.getElementById("amount").innerHTML =" x " + amount + " ";
+        amountLabel = document.getElementById("amount").innerHTML = " x " + amount + " ";
         EmptyCart.style.display = "none";
         itemCart.style.display = "flex";
     }
@@ -93,7 +117,7 @@ function onDeleteButton() {
 
     var itemCart = document.getElementById("item");
     var EmptyCart = document.getElementById("emptyCart");
-    
+
     EmptyCart.style.display = "flex";
     itemCart.style.display = "none";
     console.log("nothing to add!");
@@ -101,16 +125,16 @@ function onDeleteButton() {
     amount = 0;
 }
 
-function onMinus(){
+function onMinus() {
     var itemCart = document.getElementById("item");
     var EmptyCart = document.getElementById("emptyCart");
     amount = amount - 1;
     calcCost();
     priceLabel = document.getElementById("totalPrice").innerHTML = finalCosts + "$";
-    amountLabel = document.getElementById("amount").innerHTML =" x " + amount + " ";
-    if(finalCosts == 0){
+    amountLabel = document.getElementById("amount").innerHTML = " x " + amount + " ";
+    if (finalCosts == 0) {
         EmptyCart.style.display = "flex";
-        itemCart.style.display = "none";  
+        itemCart.style.display = "none";
     }
 }
 
@@ -235,3 +259,30 @@ function myFunction() {
         topnav.style.display = "flex";
     }
 }
+
+function selectLanguage(language) {
+
+    classArr = document.querySelectorAll("[data-lang]");
+    buttonIdDe = document.getElementById('buttonDE');
+    buttonIdEn = document.getElementById('buttonEN');
+
+    console.log(language);
+
+    classArr.forEach(element => {
+        element.innerHTML = langMap[element.dataset.lang][language];
+    });
+
+    if (language === "de") {
+        buttonIdDe.style.display = "none";
+        buttonIdEn.style.display = "block";
+    }
+    else {
+        buttonIdDe.style.display = "block";
+        buttonIdEn.style.display = "none";
+
+    }
+
+
+
+}
+
